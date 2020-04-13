@@ -29,6 +29,29 @@
 
 		}
 
+
+
+
+		const p = document.getElementById("but1"); 
+        const q = document.getElementById("but2");  
+  
+        p.addEventListener("click", left,false); 
+        q.addEventListener("click", right,false); 
+  
+        function left() { console.log(left);
+            leftPressed=true;
+            
+        } 
+  
+        function right() { console.log(right);
+            rightPressed=true;
+             
+        } 
+
+
+
+
+
 		document.addEventListener("keydown",keyDownHandler,false);
 		document.addEventListener("keyup",keyUpHandler,false);
 

@@ -35,21 +35,36 @@
 		const p = document.getElementById("but1"); 
         const q = document.getElementById("but2");  
   
-        p.addEventListener("click", left,false); 
-        q.addEventListener("click", right,false); 
+        p.addEventListener("mouseover", left,false); 
+        q.addEventListener("mouseover", right,false); 
   
         function left() { console.log(left);
             leftPressed=true;
+            
             
         } 
   
         function right() { console.log(right);
             rightPressed=true;
+            
              
         } 
 
 
-
+        p.addEventListener("mouseout", up,false); 
+        q.addEventListener("mouseout", down,false); 
+  
+        function up() { console.log(left);
+            leftPressed=false;
+            
+            
+        } 
+  
+        function down() { console.log(right);
+            rightPressed=false;
+            
+             
+        } 
 
 
 		document.addEventListener("keydown",keyDownHandler,false);
@@ -170,7 +185,7 @@
 				else{
 					
 
-					alert(" Game over  Final score=>"+score);
+					console.log(" Game over  Final score=>"+score);
 					document.location.reload();
 					clearInterval(interval);
 				}

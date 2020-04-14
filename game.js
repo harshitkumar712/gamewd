@@ -35,8 +35,8 @@
 		const p = document.getElementById("but1"); 
         const q = document.getElementById("but2");  
   
-        p.addEventListener("mouseover", left,false); 
-        q.addEventListener("mouseover", right,false); 
+        p.addEventListener("touchstart", left,false); 
+        q.addEventListener("touchstart", right,false); 
   
         function left() { console.log(left);
             leftPressed=true;
@@ -51,8 +51,8 @@
         } 
 
 
-        p.addEventListener("mouseout", up,false); 
-        q.addEventListener("mouseout", down,false); 
+        p.addEventListener("touchend", up,false); 
+        q.addEventListener("touchend", down,false); 
   
         function up() { console.log(left);
             leftPressed=false;
